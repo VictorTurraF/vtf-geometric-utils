@@ -18,7 +18,7 @@
   },
   "scripts": {
     "start:dev": "nodemon",
-    "test:all": "jest",
+    "test:all": "jest --verbose",
     "test:watch": "jest --watchAll",
     "test:verbose": "jest --verbose"
   },
