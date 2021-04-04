@@ -1,7 +1,7 @@
 import { TransformationConcreteCreator } from '../Mocks/TransformationConcreteCreator';
 
 export class TransformationFactory {
-  public static createTransformationProduct() {
+  public static createTransformationCreator() {
     return new TransformationConcreteCreator();
   }
 }
