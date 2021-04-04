@@ -23,7 +23,7 @@
     "start:dev": "nodemon",
     "test:all": "jest --verbose",
     "test:watch": "jest --watchAll",
-    "build": "tsc"
+    "build": "tsc --project tsconfig.build.json"
   },
   "dependencies": {}
 }
