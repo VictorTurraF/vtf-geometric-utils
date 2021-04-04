@@ -11,6 +11,11 @@ module.exports = {
     'airbnb-typescript/base',
   ],
   rules: {
-    'import/prefer-default-export': 'off'
+    'import/prefer-default-export': 'off',
+    'class-methods-use-this': 'off'
+  },
+  env: {
+    jest: true,
+    node: true
   }
 };
