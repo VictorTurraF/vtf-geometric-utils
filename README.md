@@ -1,2 +1,2 @@
 # vtf-geometric-utils
-JavaScript/TypeScript geometric transformations system and utilities
+JavaScript/TypeScript library of geometric transformations and utilities.
