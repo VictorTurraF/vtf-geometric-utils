@@ -17,8 +17,26 @@ export abstract class Transformation {
     const homogeneousPoint = this.createPointHomogeneosCoordinate(point);
 
     const result = Matrix.multiplyTwoFactors([homogeneousPoint, transformationMatrix]);
-    const transformedPoint = [result.values[0][0], result.values[0][1]];
+    const [xResulting, yResulting] = result.values[0];
+
+    const transformedPoint = [
+      this.resultRounder(xResulting),
+      this.resultRounder(yResulting),
+    ];
 
     return transformedPoint;
+  }
+
+  public resultRounder(value: number) {
+    const absoluteValue = Math.abs(value);
+    const roundedValue = Math.round(value);
+    const roundedAbsoluteValue = Math.round(absoluteValue);
+
+    const difference = Math.abs(absoluteValue - roundedAbsoluteValue);
+
+    if (difference < 0.000000000000001) {
+      return roundedValue;
+    }
+    return value;
   }
 }
