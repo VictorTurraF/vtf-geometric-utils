@@ -1,4 +1,4 @@
-import { TransformationMatrix } from '../Transformation/TransformationMatrix';
+import { TransformationMatrix } from '../../Domain/Transformation/TransformationMatrix';
 
 export class TransformationConcreteProduct extends TransformationMatrix {
   public constructor(xAxisRate: number, yAxisRate: number) {

@@ -1,4 +1,4 @@
-import { Transformation } from '../Transformation/Transformation';
+import { Transformation } from '../../Domain/Transformation/Transformation';
 import { TransformationConcreteProduct } from './TransformationConcreteProduct';
 
 export class TransformationConcreteCreator extends Transformation {

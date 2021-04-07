@@ -1,4 +1,4 @@
-import { MatrixSizeError } from '../Errors/MatrixSizeError';
+import { MatrixSizeError } from '../../Shared/Errors/MatrixSizeError';
 import { RotationFactory } from './RotationFactory';
 
 describe('Rotation factory class', () => {

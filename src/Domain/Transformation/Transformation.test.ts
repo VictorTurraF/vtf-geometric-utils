@@ -1,6 +1,6 @@
-import { InconpatibleMatricesError } from '../Errors/IncompatibleMatricesError';
-import { MatrixSizeError } from '../Errors/MatrixSizeError';
-import { TransformationConcreteProduct } from '../Mocks/TransformationConcreteProduct';
+import { InconpatibleMatricesError } from '../../Shared/Errors/IncompatibleMatricesError';
+import { MatrixSizeError } from '../../Shared/Errors/MatrixSizeError';
+import { TransformationConcreteProduct } from '../../Shared/Mocks/TransformationConcreteProduct';
 import { TransformationFactory } from './TransformationFactory';
 
 describe('Transformation class', () => {

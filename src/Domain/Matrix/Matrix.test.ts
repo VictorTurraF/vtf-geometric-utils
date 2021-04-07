@@ -1,6 +1,6 @@
-import { InconpatibleMatricesError } from '../Errors/IncompatibleMatricesError';
-import { TooFewFactorsError } from '../Errors/TooFewFactorsError';
-import { MatrixSizeError } from '../Errors/MatrixSizeError';
+import { InconpatibleMatricesError } from '../../Shared/Errors/IncompatibleMatricesError';
+import { TooFewFactorsError } from '../../Shared/Errors/TooFewFactorsError';
+import { MatrixSizeError } from '../../Shared/Errors/MatrixSizeError';
 import { Matrix } from './Matrix';
 import { MatrixFactory } from './MatrixFactory';
 
