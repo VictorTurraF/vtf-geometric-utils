@@ -64,4 +64,19 @@ describe('Translation class', () => {
 
     expect(translation.apply([3, 8])).toEqual([1, 5]);
   });
+
+  it('should translatin multiple points', () => {
+    const translation = TranslationFactory.createDiagonalTranslator();
+
+    expect(
+      translation.applyToPoints([
+        [1, 1],
+        [2, 5],
+      ]),
+    )
+      .toEqual([
+        [3, 4],
+        [4, 8],
+      ]);
+  });
 });

@@ -36,4 +36,17 @@ describe('Transformation class', () => {
 
     expect(tranformationCreator.apply([2, 1])).toEqual([4, 4]);
   });
+
+  it('should be applying transformation for multiples points', () => {
+    const transformationCreator = TransformationFactory.createTransformationCreator();
+
+    expect(transformationCreator.applyToPoints([
+      [2, 2],
+      [5, 5],
+    ]))
+      .toEqual([
+        [4, 5],
+        [7, 8],
+      ]);
+  });
 });

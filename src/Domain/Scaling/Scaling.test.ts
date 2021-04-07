@@ -19,4 +19,16 @@ describe('Scaling transformation class', () => {
 
     expect(scaling.apply([2, 2])).toEqual([4, 2]);
   });
+
+  it('should scaling multiple points', () => {
+    const scaling = ScalingFactory.createScalingTransformation();
+
+    expect(scaling.applyToPoints([
+      [2, 2],
+      [-2, 2],
+    ])).toEqual([
+      [4, 6],
+      [-4, 6],
+    ]);
+  });
 });
