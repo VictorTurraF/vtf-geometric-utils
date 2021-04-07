@@ -1,4 +1,4 @@
-import { TransformationConcreteCreator } from '../Mocks/TransformationConcreteCreator';
+import { TransformationConcreteCreator } from '../../Shared/Mocks/TransformationConcreteCreator';
 
 export class TransformationFactory {
   public static createTransformationCreator() {

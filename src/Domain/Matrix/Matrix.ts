@@ -1,6 +1,6 @@
-import { InconpatibleMatricesError } from '../Errors/IncompatibleMatricesError';
-import { MatrixSizeError } from '../Errors/MatrixSizeError';
-import { TooFewFactorsError } from '../Errors/TooFewFactorsError';
+import { InconpatibleMatricesError } from '../../Shared/Errors/IncompatibleMatricesError';
+import { MatrixSizeError } from '../../Shared/Errors/MatrixSizeError';
+import { TooFewFactorsError } from '../../Shared/Errors/TooFewFactorsError';
 
 export type NumericMatrix = number[][];
 export type MapColumnsCallBack<T> = (column: number[], index: number, matrix: NumericMatrix) => T;
