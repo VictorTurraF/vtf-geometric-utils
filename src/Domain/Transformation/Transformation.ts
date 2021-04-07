@@ -1,6 +1,8 @@
 import { Matrix } from '../Matrix/Matrix';
 import { TransformationMatrix } from './TransformationMatrix';
 
+export type Point = [number, number];
+
 export abstract class Transformation {
   public abstract createTransformationMatrix(): TransformationMatrix;
 
@@ -25,6 +27,19 @@ export abstract class Transformation {
     ];
 
     return transformedPoint;
+  }
+
+  public applyToPoints(points: Point[]) {
+    const transformationMatrix = this.createTransformationMatrix();
+    const homogeneousPoints = points.map((point) => [point[0], point[1], 1]);
+    const homogeneousPointsMatrix = new Matrix(points.length, 3, homogeneousPoints);
+
+    const result = Matrix.multiplyTwoFactors([homogeneousPointsMatrix, transformationMatrix]);
+
+    const resultingPoints = result.values.map(([xResulting, yResulting]) => (
+      [this.resultRounder(xResulting), this.resultRounder(yResulting)]));
+
+    return resultingPoints;
   }
 
   public resultRounder(value: number) {
