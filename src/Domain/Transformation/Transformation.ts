@@ -6,7 +6,7 @@ export type Point = [number, number];
 export abstract class Transformation {
   public abstract createTransformationMatrix(): TransformationMatrix;
 
-  private createPointHomogeneosCoordinate(point: [number, number]) {
+  private createPointHomogeneosCoordinate(point: Point) {
     const [xCoordinate, yCoordinate] = point;
 
     return new Matrix(1, 3, [
@@ -14,7 +14,7 @@ export abstract class Transformation {
     ]);
   }
 
-  public apply(point: [number, number]) {
+  public apply(point: Point) {
     const transformationMatrix = this.createTransformationMatrix();
     const homogeneousPoint = this.createPointHomogeneosCoordinate(point);
 
@@ -31,8 +31,7 @@ export abstract class Transformation {
 
   public applyToPoints(points: Point[]) {
     const transformationMatrix = this.createTransformationMatrix();
-    const homogeneousPoints = points.map((point) => [point[0], point[1], 1]);
-    const homogeneousPointsMatrix = new Matrix(points.length, 3, homogeneousPoints);
+    const homogeneousPointsMatrix = this.createHomogeneousPointsMatrix(points);
 
     const result = Matrix.multiplyTwoFactors([homogeneousPointsMatrix, transformationMatrix]);
 
@@ -53,5 +52,10 @@ export abstract class Transformation {
       return roundedValue;
     }
     return value;
+  }
+
+  public createHomogeneousPointsMatrix(points: Point[]) {
+    const homogeneousPoints = points.map((point) => [point[0], point[1], 1]);
+    return new Matrix(points.length, 3, homogeneousPoints);
   }
 }
