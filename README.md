@@ -51,9 +51,9 @@ D = (4, 4)
 
 Basta fazer da seguinte forma:
 ```js
-const SelfRotation = require('./Domain/SelfRotation/SelfRotation');
+const { SelfRotation } = require('./Domain/SelfRotation/SelfRotation');
 
-const pontos = [
+const squarePoints = [
   [2, 2],
   [2, 4],
   [4, 2],
@@ -61,10 +61,9 @@ const pontos = [
 ];
 
 const rotation = new SelfRotation(45);
+const rotationResult = rotation.applyToPoints(squarePoints);
 
-const result = rotation.applyToPoints(pontos);
-
-console.log(result)
+console.log(rotationResult)
 
 /* Irá mostar no console algo como:
  *
