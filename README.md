@@ -4,8 +4,8 @@ Bibliteca JavaScript/TypeScript de transformações geométricas e utilitários 
 ## Instalação
 
 ### Requisitos
-- Node JS. Qualquer versão entre a 10.x e 15.x
-- Yarn package manager
+- [Node JS](https://nodejs.org/). Qualquer versão entre a 10.x e 15.x;
+- [Yarn](https://yarnpkg.com/) package manager.
 
 ### Passos
 1. Clone o repositório:
@@ -13,12 +13,12 @@ Bibliteca JavaScript/TypeScript de transformações geométricas e utilitários 
 git clone https://github.com/VictorTurraF/vtf-geometric-utils.git
 ```
 
-2. Na raíz do repositório execute o `yarn` para instalar as dependências:
+2. Na raíz do repositório execute o `yarn` para instalar as dependências com o comando:
 ```
 yarn install
 ```
 
-3. No aquivo `src/index.js` você pode inserir seus códigos. Nele já possui três exemplos utilizando as transformações básicas
+3. No aquivo `src/index.js` você pode inserir seus códigos. Nele já possui três exemplos utilizando as transformações básicas.
 
 4. Para rodar o arquivo `index.js`, execute o seguinte comando na raiz do projeto:
 ```
@@ -41,7 +41,7 @@ A arquitetura do projeto permite a criação de novos tipos de transformações 
 ## Exemplos
 ### Uso
 
-Imagine que você quer rotacionar em 45 graus um quadrado dados os seus pontos:
+Imagine que você quer rotacionar em 45 graus no sentido horário um quadrado dados os seus pontos:
 ```
 A = (2, 2)
 B = (2, 4)
