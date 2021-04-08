@@ -18,7 +18,7 @@ git clone https://github.com/VictorTurraF/vtf-geometric-utils.git
 yarn install
 ```
 
-3. Dentro do diretório `src` crie um arquivo `index.js` para inserir os códigos.
+3. No aquivo `src/index.js` você pode inserir seus códigos. Nele já possui três exemplos utilizando as transformações básicas
 
 4. Para rodar o arquivo `index.js`, execute o seguinte comando na raiz do projeto:
 ```
